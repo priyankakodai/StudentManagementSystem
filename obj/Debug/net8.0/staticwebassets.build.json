@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "KHqqhp44gNW1IwRqie25hCRhRmgXDUAjdI3Z7kyw8m4=",
   "Source": "StudentWebApp",
   "BasePath": "_content/StudentWebApp",
@@ -1195,4 +1196,14 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     }
   ]
+=======
+  "Hash": "h1CWGdpJeEwSfHsrXqAIvtuaEhLdhsQIiCqRWzF8ptY=",
+  "Source": "StudentAPI",
+  "BasePath": "_content/StudentAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+>>>>>>> bdb365cb097ab2d431762969e71c4587c82a328c
 }
