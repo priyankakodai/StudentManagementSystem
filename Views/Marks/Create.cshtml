@@ -1,0 +1,110 @@
+﻿@model StudentWebApp.Models.Marks
+
+<style>
+    .input-focus:focus {
+        border-color: #6a11cb !important;
+        box-shadow: 0 0 10px rgba(106, 17, 203, 0.4) !important;
+    }
+
+    .card-glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+
+    .btn-animate:hover {
+        transform: scale(1.07);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+
+            <div class="card shadow-lg card-glass border-0 rounded-4">
+                <div class="card-header text-white text-center py-4"
+                     style="background: linear-gradient(135deg, #6a11cb, #2575fc); border-radius: 20px 20px 0 0;">
+                    <h2 class="fw-bold mb-0">
+                        <i class="bi bi-journal-text me-2"></i> Add Student Marks
+                    </h2>
+                </div>
+
+                <div class="card-body p-5">
+
+                    <form asp-action="Create" method="post">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-secondary">Student ID</label>
+                            <input asp-for="StudentId"
+                                   class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                   placeholder="Enter Student ID" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-secondary">Student Name</label>
+                            <input asp-for="Name"
+                                   class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                   placeholder="Enter Student Name" />
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-secondary">Tamil</label>
+                                <input asp-for="Tamil"
+                                       class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                       placeholder="Tamil Marks" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-secondary">English</label>
+                                <input asp-for="English"
+                                       class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                       placeholder="English Marks" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-secondary">Maths</label>
+                                <input asp-for="Maths"
+                                       class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                       placeholder="Maths Marks" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-secondary">Science</label>
+                                <input asp-for="Science"
+                                       class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                       placeholder="Science Marks" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-secondary">Social</label>
+                                <input asp-for="Social"
+                                       class="form-control form-control-lg rounded-3 shadow-sm input-focus"
+                                       placeholder="Social Marks" />
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5 d-flex justify-content-center gap-4">
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg px-5 rounded-pill shadow-sm btn-animate"
+                                    style="background: linear-gradient(135deg, #2575fc, #6a11cb); border: none;">
+                                Save
+                            </button>
+
+                            <a asp-action="Index"
+                               class="btn btn-secondary btn-lg px-5 rounded-pill shadow-sm btn-animate"
+                               style="background: linear-gradient(135deg, #616161, #9e9e9e); border: none;">
+                                Back to List
+                            </a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model StudentWebApp.Models.Student
+
+<h2>Delete Student</h2>
+
+<h4>Are you sure you want to delete this student?</h4>
+<hr />
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Class</dt>
+        <dd class="col-sm-9">@Model.Class</dd>
+
+        <dt class="col-sm-3">Section</dt>
+        <dd class="col-sm-9">@Model.Section</dd>
+
+        <dt class="col-sm-3">ClassTechName</dt>
+        <dd class="col-sm-9">@Model.ClassTechName</dd>
+
+        <dt class="col-sm-3">Mobile</dt>
+        <dd class="col-sm-9">@Model.Mobile </dd>
+
+
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/Students" class="btn btn-secondary">Cancel</a>
+</form>

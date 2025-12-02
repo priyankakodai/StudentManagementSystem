@@ -1,0 +1,52 @@
+﻿@model IEnumerable<StudentWebApp.Models.Student>
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">Student List</h3>
+            <a class="btn btn-light text-primary fw-bold" href="/Students/Create">
+                <i class="bi bi-plus-circle"></i> Create New
+            </a>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-hover table-striped align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                        <th>Class Teacher Name</th>
+                        <th>Mobile</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var s in Model)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@s.Name</td>
+                            <td><span class="badge bg-primary">@s.Class</span></td>
+                            <td><span class="badge bg-secondary">@s.Section</span></td>
+                            <td>@s.ClassTechName</td>
+                            <td>@s.Mobile</td>
+
+                            <td class="text-center">
+                                <a class="btn btn-sm btn-warning me-2" href="/Students/Edit/@s.Id">
+                                    <i class="bi bi-pencil-square"></i> Edit
+                                </a>
+                                <a class="btn btn-sm btn-danger" href="/Students/Delete/@s.Id">
+                                    <i class="bi bi-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
